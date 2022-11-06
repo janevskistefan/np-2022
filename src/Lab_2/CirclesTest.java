@@ -1,5 +1,6 @@
 package Lab_2;
 
+import java.sql.SQLOutput;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -7,7 +8,6 @@ enum TYPE {
     POINT,
     CIRCLE
 }
-
 enum DIRECTION {
     UP,
     DOWN,
@@ -33,12 +33,19 @@ public class CirclesTest {
             int ySpeed = Integer.parseInt(parts[4]);
 
             if (Integer.parseInt(parts[0]) == 0) { //point
-                //TODO - exception handling -- see test cases
-                collection.addMovableObject(new MovablePoint(x, y, xSpeed, ySpeed));
+                try {
+                    collection.addMovableObject(new MovablePoint(x, y, xSpeed, ySpeed));
+                } catch (MovableObjectNotFittableException e) {
+                    System.out.println(e.getMessage());
+                }
             } else { //circle
                 int radius = Integer.parseInt(parts[5]);
-                // TODO - exception handling -- see test cases
-                collection.addMovableObject(new MovableCircle(radius, new MovablePoint(x, y, xSpeed, ySpeed)));
+                try {
+                    collection.addMovableObject(new MovableCircle(radius, new MovablePoint(x, y, xSpeed, ySpeed)));
+                } catch (MovableObjectNotFittableException e) {
+                    // TODO - potrebno e da se ispechati MovableCircle with center... can not be fitted into the collection ako ne e ispolnet uslov.
+                    System.out.println(e.getMessage());
+                }
             }
 
         }
@@ -71,17 +78,21 @@ public class CirclesTest {
 }
 
 class ObjectCanNotBeMovedException extends Exception {
-    public ObjectCanNotBeMovedException() {
+    Movable obj;
+    public ObjectCanNotBeMovedException(Movable obj) {
         super();
+        this.obj = obj;
     }
-    // TODO - String arg in constructor?
+
+   public void point_out_of_bounds(){
+       System.out.printf("Point (%d,%d) is out of bounds\n", obj.getCurrentXPosition(), obj.getCurrentYPosition());
+   }
 }
 
 class MovableObjectNotFittableException extends Exception {
-    public MovableObjectNotFittableException() {
-        super();
+    public MovableObjectNotFittableException(String text) {
+        super(text);
     }
-    // TODO - String arg in constructor?
 }
 
 interface Movable {
@@ -112,27 +123,43 @@ class MovablePoint implements Movable {
 
     @Override
     public String toString() {
-        return "Movable point with coordinates (" + x + y + ")";
+        return "Movable point with coordinates (" + x + "," + y + ")";
     }
 
     @Override
-    public void moveUp() {
+    public void moveUp() throws ObjectCanNotBeMovedException {
         y += ySpeed;
+        if (MovablesCollection.not_in_bounds(this)) {
+            y -= ySpeed;
+            throw new ObjectCanNotBeMovedException(new MovablePoint(x,y+ySpeed,xSpeed,ySpeed));
+        }
     }
 
     @Override
-    public void moveLeft() {
+    public void moveLeft() throws ObjectCanNotBeMovedException {
         x -= xSpeed;
+        if (MovablesCollection.not_in_bounds(this)) {
+            x += xSpeed;
+            throw new ObjectCanNotBeMovedException(new MovablePoint(x-xSpeed, y, xSpeed, ySpeed));
+        }
     }
 
     @Override
-    public void moveRight() {
+    public void moveRight() throws ObjectCanNotBeMovedException {
         x += xSpeed;
+        if (MovablesCollection.not_in_bounds(this)) {
+            x -= xSpeed;
+            throw new ObjectCanNotBeMovedException(new MovablePoint(x+xSpeed, y, xSpeed, ySpeed));
+        }
     }
 
     @Override
-    public void moveDown() {
+    public void moveDown() throws ObjectCanNotBeMovedException {
         y -= ySpeed;
+        if (MovablesCollection.not_in_bounds(this)) {
+            y += ySpeed;
+            throw new ObjectCanNotBeMovedException(new MovablePoint(x,y-ySpeed, xSpeed, ySpeed));
+        }
     }
 
     @Override
@@ -144,6 +171,7 @@ class MovablePoint implements Movable {
     public int getCurrentYPosition() {
         return y;
     }
+
 }
 
 class MovableCircle implements Movable {
@@ -157,27 +185,43 @@ class MovableCircle implements Movable {
     }
 
     public String toString() {
-        return "Movable circle with center coordinates (" + center.getCurrentXPosition() + center.getCurrentYPosition() + ") and radius " + radius;
+        return "Movable circle with center coordinates (" + center.getCurrentXPosition() + "," + center.getCurrentYPosition() + ") and radius " + radius;
     }
 
     @Override
     public void moveUp() {
-        center.moveUp();
+        try {
+            center.moveUp();
+        } catch (ObjectCanNotBeMovedException e) {
+            e.point_out_of_bounds();
+        }
     }
 
     @Override
     public void moveLeft() {
-        center.moveLeft();
+        try {
+            center.moveLeft();
+        } catch (ObjectCanNotBeMovedException e) {
+            e.point_out_of_bounds();
+        }
     }
 
     @Override
     public void moveRight() {
-        center.moveRight();
+        try {
+            center.moveRight();
+        } catch (ObjectCanNotBeMovedException e) {
+            e.point_out_of_bounds();
+        }
     }
 
     @Override
     public void moveDown() {
-        center.moveDown();
+        try {
+            center.moveDown();
+        } catch (ObjectCanNotBeMovedException e) {
+            e.point_out_of_bounds();
+        }
     }
 
     @Override
@@ -207,49 +251,103 @@ class MovablesCollection {
     }
 
     void addMovableObject(Movable m) throws MovableObjectNotFittableException {
-        if(!is_in_bounds(m))
-            throw new MovableObjectNotFittableException();
-        movable = Arrays.copyOf(movable, movable.length + 1);
-        movable[movable.length - 1] = m;
 
+        if(m.getClass().toString().compareTo(MovableCircle.class.toString())==0) {
+            MovableCircle temp = (MovableCircle) m;
+            MovablePoint center = temp.center;
+            MovablePoint up = new MovablePoint(center.getCurrentXPosition(), center.getCurrentYPosition()+temp.getRadius(),0,0);
+            MovablePoint down = new MovablePoint(center.getCurrentXPosition(), center.getCurrentYPosition()- temp.getRadius(),0,0);
+            MovablePoint left = new MovablePoint(center.getCurrentXPosition()- temp.getRadius(), center.getCurrentYPosition(), 0,0);
+            MovablePoint right = new MovablePoint(center.getCurrentXPosition()+ temp.getRadius(), center.getCurrentYPosition(), 0,0);
+            if(not_in_bounds(center) || not_in_bounds(up) || not_in_bounds(down) || not_in_bounds(left) || not_in_bounds(right))
+                throw new MovableObjectNotFittableException(String.format("Movable circle with center (%d,%d) and radius %d can not be fitted into the collection", center.getCurrentXPosition(), center.getCurrentYPosition(), temp.getRadius()));
+        } else {
+            if(not_in_bounds((MovablePoint)m))
+                throw new MovableObjectNotFittableException(m.toString());
+        }
+
+        if(movable == null) {
+            movable = new Movable[1];
+            movable[0] = m;
+            return;
+        }
+
+        Movable[] temp_array = new Movable[movable.length+1];
+        System.arraycopy(movable, 0, temp_array, 0, movable.length);
+        temp_array[movable.length] = m;
+        movable = temp_array;
     }
 
-    private boolean is_in_bounds (Movable m) {
-       if (m.getClass().toString().compareTo(CirclesTest.class.toString()) == 0) {
-           return is_in_bounds_circle((MovableCircle) m);
-       }
-       return is_in_bounds_point((MovablePoint) m);
-    }
-    private boolean is_in_bounds_point(MovablePoint m) {
-        return m.getCurrentXPosition() >= 0 &&
-                m.getCurrentXPosition() <= max_x &&
-                m.getCurrentYPosition() >= 0 &&
-                m.getCurrentYPosition() <= max_y;
+    public static boolean not_in_bounds(Movable m) {
+        return m.getCurrentXPosition() < 0 ||
+                m.getCurrentXPosition() >= max_x ||
+                m.getCurrentYPosition() < 0 ||
+                m.getCurrentYPosition() >= max_y;
     }
 
-    private boolean is_in_bounds_circle(MovableCircle m) {
-        return is_in_bounds_point(new MovablePoint(m.getCurrentXPosition(), m.getCurrentYPosition(), 0, 0)) &&
-                is_in_bounds_point(new MovablePoint(m.getCurrentXPosition() - m.getRadius(), m.getCurrentYPosition(), 0, 0)) &&
-                is_in_bounds_point(new MovablePoint(m.getCurrentXPosition() + m.getRadius(), m.getCurrentYPosition(), 0, 0)) &&
-                is_in_bounds_point(new MovablePoint(m.getCurrentXPosition(), m.getCurrentYPosition() - m.getRadius(), 0, 0)) &&
-                is_in_bounds_point(new MovablePoint(m.getCurrentXPosition(), m.getCurrentYPosition() + m.getRadius(), 0, 0));
+    private void move_all_circles(DIRECTION direction) {
+        List<Movable> circles = Arrays.stream(movable)
+                .filter(elem -> elem.getClass().toString().compareTo(MovableCircle.class.toString()) == 0)
+                .collect(Collectors.toList());
+        //System.out.println("move_all_circles: " + circles);
+        move_list_points(direction, circles);
     }
 
-    private void move_all_circles (DIRECTION direction) {
-        List<Movable> circles = Arrays.stream(movable).filter(elem -> elem.getClass().toString().compareTo(MovableCircle.class.toString())==0).collect(Collectors.toList());
-        if(direction == DIRECTION.UP){
-            circles.forEach(circle -> {
-                try {
-                    if(is_in_bounds_circle(circle.getCurrentYPosition()))
-                } catch (MovableObjectNotFittableException e){
-                    e.getMessage();
-                }
+    private void move_all_points(DIRECTION direction) {
+        List<Movable> points = Arrays.stream(movable)
+                .filter(element -> element.getClass().toString().compareTo(MovablePoint.class.toString())==0)
+                .collect(Collectors.toList());
+        //System.out.println("move_all_points: " + points);
+        move_list_points(direction, points);
+    }
 
-            });
+    private void move_list_points(DIRECTION direction, List<Movable> points) {
+        points.forEach(point -> {
+           if(direction == DIRECTION.UP) {
+               try {
+                   point.moveUp();
+               } catch (ObjectCanNotBeMovedException e) {
+                  e.point_out_of_bounds();
+               }
+           } else if (direction == DIRECTION.DOWN) {
+               try {
+                   point.moveDown();
+               } catch (ObjectCanNotBeMovedException e) {
+                    e.point_out_of_bounds();
+               }
+           } else if (direction == DIRECTION.RIGHT) {
+               try {
+                   point.moveRight();
+               } catch (ObjectCanNotBeMovedException e) {
+                    e.point_out_of_bounds();
+               }
+           } else {
+               try {
+                   point.moveLeft();
+               } catch (ObjectCanNotBeMovedException e) {
+                    e.point_out_of_bounds();
+               }
+
+           }
+        });
+    }
+
+    void moveObjectsFromTypeWithDirection(TYPE type, DIRECTION direction) {
+        if (type == TYPE.CIRCLE) {
+            move_all_circles(direction);
+        } else {
+            move_all_points(direction);
         }
     }
 
-    void moveObjectsFromTypeWithDirection (TYPE type, DIRECTION direction){
-
+    public static void setxMax(int max_x) {MovablesCollection.max_x = max_x;}
+    public static void setyMax(int max_y) {MovablesCollection.max_y = max_y;}
+    @Override
+    public String toString() {
+        StringBuilder tempString = new StringBuilder();
+        tempString.append("Collection of movable objects with size ").append(movable.length).append(":\n");
+        for(Movable elem: movable)
+            tempString.append(elem).append("\n");
+        return tempString.toString();
     }
 }
