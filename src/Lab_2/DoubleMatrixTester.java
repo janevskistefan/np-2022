@@ -23,7 +23,6 @@ class InvalidRowNumberException extends Exception {
 
 class InvalidColumnNumberException extends Exception {
     public InvalidColumnNumberException(String input) {
-        // TODO - Potencijalan problem, mozhda treba neshto da se prati kako argument.
         super(input);
     }
 }

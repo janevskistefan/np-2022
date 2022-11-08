@@ -43,7 +43,6 @@ public class CirclesTest {
                 try {
                     collection.addMovableObject(new MovableCircle(radius, new MovablePoint(x, y, xSpeed, ySpeed)));
                 } catch (MovableObjectNotFittableException e) {
-                    // TODO - potrebno e da se ispechati MovableCircle with center... can not be fitted into the collection ako ne e ispolnet uslov.
                     System.out.println(e.getMessage());
                 }
             }
