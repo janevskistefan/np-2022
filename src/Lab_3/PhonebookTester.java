@@ -4,7 +4,8 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class PhonebookTester {
-/*
+
+    /*
     public static void main(String[] args) throws Exception {
         Scanner jin = new Scanner(System.in);
         String line = jin.nextLine();
@@ -127,6 +128,7 @@ public class PhonebookTester {
         System.out.println(contact.toString());
     }
 
+    */
     static String[] legit_prefixes = {"070","071","072","075","076","077","078"};
     static Random rnd = new Random();
 
@@ -140,8 +142,6 @@ public class PhonebookTester {
             sb.append(rnd.nextInt(10));
         return sb.toString();
     }
-
- */
 
 }
 
@@ -197,5 +197,12 @@ class Contact {
 
         }
 
+    }
+
+    private boolean is_number_valid (String number) {
+    return number.length() == 9 &&
+            Arrays.stream(PhonebookTester.legit_prefixes)
+                    .anyMatch(elem -> elem.
+                            equals(number.substring(0,4)));
     }
 }
