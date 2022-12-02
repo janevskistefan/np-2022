@@ -105,15 +105,3 @@ class WeatherReading{
         return String.format("%.1f %.1f km/h %.1f%% %.1f km ", temperature, wind, humidity, visibility) + date;
     }
 }
-
-interface Compare {
-
-}
-
-interface Compare_child extends Compare {
-
-}
-
-class Box<? extends Compare> {
-
-}
