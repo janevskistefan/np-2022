@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class PhonebookTester {
-
+/*
     public static void main(String[] args) throws Exception {
         Scanner jin = new Scanner(System.in);
         String line = jin.nextLine();
@@ -141,6 +141,8 @@ public class PhonebookTester {
         return sb.toString();
     }
 
+ */
+
 }
 
 class InvalidNameException extends Exception {
@@ -195,12 +197,5 @@ class Contact {
 
         }
 
-    }
-
-    private boolean is_number_valid (String number) {
-    return number.length() == 9 &&
-            Arrays.stream(PhonebookTester.legit_prefixes)
-                    .anyMatch(elem -> elem.
-                            equals(number.substring(0,4)));
     }
 }
