@@ -71,7 +71,6 @@ class PriorityTask implements Task {
 
     @Override
     public int getOrder() {
-        // TODO: Implement Logic
         return priority;
     }
 }
@@ -91,7 +90,6 @@ class TimedTask implements Task {
 
     @Override
     public int getOrder() {
-        // TODO: Implement Logic
         return time;
     }
 }
