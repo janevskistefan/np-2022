@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33697e7a-0b4a-4a8b-9c79-5567862ec4bd" name="Changes" comment="Генерички евалуатор и Распоредувач на задачи">
-      <change afterPath="$PROJECT_DIR$/src/Lab_5/ResizableArrayTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lab_5/QueueTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Midterm_1/TaskSchedulerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Midterm_1/TaskSchedulerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Midterm_1/WeatherStationTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main_test.java" afterDir="false" />
+    <list default="true" id="33697e7a-0b4a-4a8b-9c79-5567862ec4bd" name="Changes" comment="l1.1 &amp; l2.3">
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lab_6/IntegerListTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lab_6/SuperStringTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MidTerm_2_exercises/FootballTableTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MidTerm_2_exercises/WeatherStationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Midterm_1/GenericFractionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Midterm_1/LoggerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Midterm_1/TripleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/np_aud9/audition_problem/AuditionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/np_aud9/names_problem/Names.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/np_aud9/names_problem/boyNames.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/np_aud9/names_problem/girlNames.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main_test.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +32,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/Lab_5/QueueTest.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -42,24 +55,34 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last.edited.regexp": "Sample Tex      асд 3            ",
-    "last_opened_file_path": "C:/Users/Stefan Janevski/IdeaProjects/np-2022",
+    "last_opened_file_path": "C:/Users/Stefan Janevski/IdeaProjects/np-2022/src/np_aud9",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.TaskSchedulerTest">
-    <configuration name="EvaluatorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="/usr/lib/jvm/java-8-openjdk-amd64/jre" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="Midterm_1.EvaluatorTest" />
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="np_aud9.audition_problem" />
+      <recent name="Lab_6" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Stefan Janevski\IdeaProjects\np-2022\src\np_aud9" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Stefan Janevski\IdeaProjects\np-2022\src\np_aud9\names_problem" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.WeatherStationTest">
+    <configuration name="FootballTableTest (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MidTerm_2_exercises.FootballTableTest" />
       <module name="np-2022" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Midterm_1.*" />
+          <option name="PATTERN" value="MidTerm_2_exercises.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -67,14 +90,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TaskSchedulerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="/usr/lib/jvm/java-8-openjdk-amd64/jre" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="Midterm_1.TaskSchedulerTest" />
+    <configuration name="FootballTableTest (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MidTerm_2_exercises.FootballTableTest" />
       <module name="np-2022" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Midterm_1.*" />
+          <option name="PATTERN" value="MidTerm_2_exercises.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -82,33 +103,117 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="ALTERNATIVE_JRE_PATH" value="/usr/lib/jvm/java-8-openjdk-amd64/jre" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <configuration name="FootballTableTest (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MidTerm_2_exercises.FootballTableTest" />
       <module name="np-2022" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MidTerm_2_exercises.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="main_test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin" />
-      <option name="MAIN_CLASS_NAME" value="main_test" />
+    <configuration name="FootballTableTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MidTerm_2_example_problems.FootballTableTest" />
       <module name="np-2022" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MidTerm_2_example_problems.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Application.EvaluatorTest" />
-      <item itemvalue="Application.TaskSchedulerTest" />
-      <item itemvalue="Application.main_test" />
-    </list>
+    <configuration name="FootballTableTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MidTerm_2_example_problems.FootballTableTest" />
+      <module name="np-2022" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MidTerm_2_example_problems.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FootballTableTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MidTerm_2_example_problems.FootballTableTest" />
+      <module name="np-2022" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MidTerm_2_example_problems.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FootballTableTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MidTerm_2_exercises.FootballTableTest" />
+      <module name="np-2022" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MidTerm_2_exercises.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FootballTableTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MidTerm_2_exercises.FootballTableTest" />
+      <module name="np-2022" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MidTerm_2_exercises.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WeatherStation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MidTerm_2_example_problems.WeatherStation" />
+      <module name="np-2022" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MidTerm_2_example_problems.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WeatherStationTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MidTerm_2_example_problems.WeatherStationTest" />
+      <module name="np-2022" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MidTerm_2_example_problems.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TaskSchedulerTest" />
-        <item itemvalue="Application.EvaluatorTest" />
-        <item itemvalue="Application.main_test" />
         <item itemvalue="Application.WeatherStationTest" />
+        <item itemvalue="Application.WeatherStation" />
+        <item itemvalue="Application.FootballTableTest" />
+        <item itemvalue="Application.FootballTableTest (5)" />
+        <item itemvalue="Application.FootballTableTest (4)" />
       </list>
     </recent_temporary>
   </component>
@@ -130,18 +235,16 @@
       <workItem from="1667762592115" duration="401000" />
       <workItem from="1667763011674" duration="24000" />
       <workItem from="1667763045375" duration="19869000" />
-      <workItem from="1669993946824" duration="203000" />
-      <workItem from="1669994156411" duration="57000" />
-      <workItem from="1669994219321" duration="50000" />
-      <workItem from="1669994275069" duration="231000" />
-      <workItem from="1669994580192" duration="92000" />
-      <workItem from="1669994761846" duration="41000" />
-      <workItem from="1669994809700" duration="311000" />
-      <workItem from="1669995126790" duration="28000" />
-      <workItem from="1669995166050" duration="461000" />
-      <workItem from="1669995989205" duration="9425000" />
-      <workItem from="1670010762072" duration="277000" />
-      <workItem from="1670011046785" duration="5596000" />
+      <workItem from="1669929071573" duration="14286000" />
+      <workItem from="1669988549269" duration="552000" />
+      <workItem from="1669989119373" duration="45000" />
+      <workItem from="1669989173319" duration="703000" />
+      <workItem from="1670060339106" duration="5224000" />
+      <workItem from="1670176391631" duration="1812000" />
+      <workItem from="1670321662247" duration="2350000" />
+      <workItem from="1670328977138" duration="3130000" />
+      <workItem from="1670342788849" duration="14720000" />
+      <workItem from="1670949805115" duration="38980000" />
     </task>
     <task id="LOCAL-00001" summary="l1.1 &amp; l2.3">
       <created>1667771332065</created>
@@ -150,28 +253,7 @@
       <option name="project" value="LOCAL" />
       <updated>1667771332065</updated>
     </task>
-    <task id="LOCAL-00002" summary="l1.1 &amp; l2.3">
-      <created>1670006940603</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1670006940603</updated>
-    </task>
-    <task id="LOCAL-00003" summary="test">
-      <created>1670007048421</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1670007048421</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Генерички евалуатор и Распоредувач на задачи">
-      <created>1670022262301</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1670022262301</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,12 +273,15 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="l1.1 &amp; l2.3" />
-    <MESSAGE value="test" />
-    <MESSAGE value="Генерички евалуатор и Распоредувач на задачи" />
-    <option name="LAST_COMMIT_MESSAGE" value="Генерички евалуатор и Распоредувач на задачи" />
+    <option name="LAST_COMMIT_MESSAGE" value="l1.1 &amp; l2.3" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/np_2022$SuperStringTest.ic" NAME="SuperStringTest Coverage Results" MODIFIED="1670348112214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Lab_6.*</FILTER>
+    </SUITE>
   </component>
 </project>
