@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="33697e7a-0b4a-4a8b-9c79-5567862ec4bd" name="Changes" comment="l1.1 &amp; l2.3">
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lab_6/IntegerListTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lab_6/SuperStringTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MidTerm_2_exercises/FootballTableTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MidTerm_2_exercises/WeatherStationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Midterm_1/GenericFractionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Midterm_1/LoggerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Midterm_1/TripleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/np_aud9/audition_problem/AuditionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/np_aud9/names_problem/Names.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/np_aud9/names_problem/boyNames.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/np_aud9/names_problem/girlNames.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lab_7/Anagrams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lab_7/ChatSystemTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lab_7/SchedulerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lab_7/TermFrequencyTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_test.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,14 +47,19 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last.edited.regexp": "Sample Tex      асд 3            ",
+    "last.edited.regexp": "",
     "last_opened_file_path": "C:/Users/Stefan Janevski/IdeaProjects/np-2022/src/np_aud9",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.keymap"
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -76,59 +74,7 @@
       <recent name="C:\Users\Stefan Janevski\IdeaProjects\np-2022\src\np_aud9\names_problem" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WeatherStationTest">
-    <configuration name="FootballTableTest (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MidTerm_2_exercises.FootballTableTest" />
-      <module name="np-2022" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="MidTerm_2_exercises.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FootballTableTest (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MidTerm_2_exercises.FootballTableTest" />
-      <module name="np-2022" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="MidTerm_2_exercises.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FootballTableTest (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MidTerm_2_exercises.FootballTableTest" />
-      <module name="np-2022" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="MidTerm_2_exercises.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FootballTableTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MidTerm_2_example_problems.FootballTableTest" />
-      <module name="np-2022" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="MidTerm_2_example_problems.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.TermFrequencyTest (2)">
     <configuration name="FootballTableTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MidTerm_2_example_problems.FootballTableTest" />
       <module name="np-2022" />
@@ -181,12 +127,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WeatherStation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MidTerm_2_example_problems.WeatherStation" />
+    <configuration name="TermFrequencyTest (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lab_7.TermFrequencyTest" />
       <module name="np-2022" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="MidTerm_2_example_problems.*" />
+          <option name="PATTERN" value="Lab_7.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -194,12 +140,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WeatherStationTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MidTerm_2_example_problems.WeatherStationTest" />
+    <configuration name="TermFrequencyTest (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lab_7.TermFrequencyTest" />
       <module name="np-2022" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="MidTerm_2_example_problems.*" />
+          <option name="PATTERN" value="Lab_7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TermFrequencyTest (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lab_7.TermFrequencyTest" />
+      <module name="np-2022" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lab_7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TermFrequencyTest (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lab_7.TermFrequencyTest" />
+      <module name="np-2022" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lab_7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TermFrequencyTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lab_7.TermFrequencyTest" />
+      <module name="np-2022" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lab_7.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -209,11 +194,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.WeatherStationTest" />
-        <item itemvalue="Application.WeatherStation" />
-        <item itemvalue="Application.FootballTableTest" />
-        <item itemvalue="Application.FootballTableTest (5)" />
-        <item itemvalue="Application.FootballTableTest (4)" />
+        <item itemvalue="Application.TermFrequencyTest (2)" />
+        <item itemvalue="Application.TermFrequencyTest (1)" />
+        <item itemvalue="Application.TermFrequencyTest" />
+        <item itemvalue="Application.TermFrequencyTest (5)" />
+        <item itemvalue="Application.TermFrequencyTest (4)" />
       </list>
     </recent_temporary>
   </component>
@@ -245,6 +230,11 @@
       <workItem from="1670328977138" duration="3130000" />
       <workItem from="1670342788849" duration="14720000" />
       <workItem from="1670949805115" duration="38980000" />
+      <workItem from="1672628840823" duration="92000" />
+      <workItem from="1672628938395" duration="101000" />
+      <workItem from="1672629046731" duration="113000" />
+      <workItem from="1672632043293" duration="6000" />
+      <workItem from="1672673537578" duration="6686000" />
     </task>
     <task id="LOCAL-00001" summary="l1.1 &amp; l2.3">
       <created>1667771332065</created>
